@@ -1,35 +1,55 @@
-table{
-    margin: 5%;
-    height: 50%;
+.table-scroll {
+  height: 700px;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
-.textarea{
-    width: 90%;
+
+.table {
+  margin: 5%;
+  width: 80%;
 }
-th{
+
+.textarea {
+  margin-left: 5%;
+  width: 70%;
+}
+
+th {
   font-size: medium;
 }
-div{
-    margin: 5%;
-    margin-top: 0%;
-    vertical-align: middle;
+
+div {
+  margin: 5%;
+  margin-top: 0%;
+  vertical-align: middle;
 }
-button{
-    background-color: cornflowerblue;
-    color: aliceblue;
-    font-weight: bolder;
+
+button {
+  background-color: cornflowerblue;
+  color: aliceblue;
+  font-weight: bolder;
+}
+.form-check-input:checked  {
+  text-decoration:line-through;
 }
 
 
-table::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
+/* tbody::-webkit-scrollbar {
+    width: 12px;               
   }
-  
-  table::-webkit-scrollbar-track {
-    background: orange;        /* color of the tracking area */
+   */
+/* table::-webkit-scrollbar-track {
+    background: orange;       
   }
-  
-  table::-webkit-scrollbar-thumb {
-    background-color: blue;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 3px solid orange;  /* creates padding around scroll thumb */
+   */
+/* table::-webkit-scrollbar-thumb {
+    background-color: blue;    
+    border-radius: 20px;      
+    border: 3px solid orange;  
   }
+   */
+
+/* .strikethrough:checked + span{
+    text-decoration:line-through
+  } */

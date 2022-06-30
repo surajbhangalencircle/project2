@@ -1,12 +1,17 @@
-.clr-row{
+.clr-row {
     display: flex;
 
 }
-span{
+
+.card {
+    margin: 5px;
+}
+
+span {
     margin: 22%;
 }
 
 
-.card-text{
+.card-text {
     font-size: medium;
 }

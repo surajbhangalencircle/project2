@@ -9,25 +9,26 @@ export class UserdetailsService {
   constructor(private httpClient: HttpClient) { }
 
   url = "https://jsonplaceholder.typicode.com/";
-  toDosUrl= "https://jsonplaceholder.typicode.com/todos?userId=1"
+  toDosUrl = "https://jsonplaceholder.typicode.com/todos?userId=1";
 
-  getData():Observable<any>{
+  getData(): Observable<any> {
     let endpoint = "users"
     return this.httpClient.get(this.url + endpoint);
   }
 
-  getToDos():Observable<any>{
+  getToDos(): Observable<any> {
     return this.httpClient.get(this.toDosUrl);
   }
 
-  addNewtodos(title:any):Observable<any>{
-    return this.httpClient.post(this.toDosUrl, title)
+  addNewtodos(title: any): Observable<any> {
+    return this.httpClient.post(this.toDosUrl, {title: title})
 
   }
 
-  updateTodo(status:any){
-    return this.httpClient.patch(this.toDosUrl,status)
-
+  saveTodo(status: any) {
+    return this.httpClient.post("https://jsonplaceholder.typicode.com/todos?userId=11", { status})
   }
+
+
 
 }
