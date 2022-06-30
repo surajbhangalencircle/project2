@@ -10,7 +10,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let user of users; let i=index">
+            <tr *ngFor="let user of users; let i=index">ddd
                 <td>{{i+1}}</td>
                 <td class="strikethrough">{{user.title}}</td>
                 <td id="status" >{{user.completed}}</td>
@@ -21,7 +21,7 @@
         </tbody>
         
     </table> 
-    
+
     <br>
         <div>
             <textarea class="textarea" name="description" id="inputTodo" #text></textarea>
