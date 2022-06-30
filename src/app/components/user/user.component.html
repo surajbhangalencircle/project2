@@ -1,0 +1,33 @@
+<div class="clr-row">
+    <div class="clr-col-lg-3 clr-col-md-8 clr-col-12"  *ngFor="let user of userData; let i=index">
+        <div class="card" >
+            <h2 class="card-header">{{user.name}}</h2>
+            <div class="card-block">
+                <h3 class="card-title">UserId: {{i+1}} </h3>
+                <div class="card-text">Name: {{user.name}} </div>
+                <div class="card-text">Username: {{user.username}} </div>
+                <div class="card-text">Email: {{user.email}} </div>
+                <div class="card-text">Phone: {{user.phone}} </div>
+                <div class="card-text">Website: {{user.website}} </div>
+                <div class="card-text">Address: 
+                    Street:{{user.address.street}}<br>
+                    <span>Suite:{{user.address.suite}}</span><br>
+                    <span>City:{{user.address.city}}</span><br>
+                    <span>Zipcode:{{user.address.zipcode}}</span><br>
+                    <span>City:{{user.address.city}}</span>
+                 </div>
+                <div class="card-text">Geo Location:
+                    lat: {{user.address.geo.lat}} <br>
+                <span>lng:{{user.address.geo.lng}} </span> </div>
+                <div class="card-text">Company:
+                    Name: {{user.company.name}} <br>
+                <span> CatchPhrase: {{user.company.catchPhrase}}</span> <br>
+                <span> bs: {{user.company.bs}}</span> </div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-sm btn-link" (click)="OnClick()">View Todos</button>
+            </div>
+        </div>
+    </div>
+</div>
+

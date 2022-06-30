@@ -1,0 +1,35 @@
+table{
+    margin: 5%;
+    height: 50%;
+}
+.textarea{
+    width: 90%;
+}
+th{
+  font-size: medium;
+}
+div{
+    margin: 5%;
+    margin-top: 0%;
+    vertical-align: middle;
+}
+button{
+    background-color: cornflowerblue;
+    color: aliceblue;
+    font-weight: bolder;
+}
+
+
+table::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  table::-webkit-scrollbar-track {
+    background: orange;        /* color of the tracking area */
+  }
+  
+  table::-webkit-scrollbar-thumb {
+    background-color: blue;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid orange;  /* creates padding around scroll thumb */
+  }

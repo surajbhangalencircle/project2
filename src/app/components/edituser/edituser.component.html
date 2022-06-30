@@ -1,0 +1,33 @@
+
+   <div class="container">
+    <table class="table table-bordered table-striped" overflow:scroll>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Status</th>
+                <th>Change</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users; let i=index">
+                <td>{{i+1}}</td>
+                <td class="strikethrough">{{user.title}}</td>
+                <td id="status" >{{user.completed}}</td>
+                <!-- <td><input type="checkbox" clrCheckbox onChange="changeStatus($event)" [(ngModel)]="checkboxValue" (change)="newFunction()" /></td> -->
+                <td><input type="checkbox" class="form-check-input"  [value]="user.id" [checked]="user.completed" change="changeStatus($event)"  /></td>
+            </tr>
+          
+        </tbody>
+        
+    </table>
+    <br>
+        <div>
+            <textarea class="textarea" name="description" id="inputTodo" #text></textarea>
+            <button (click)="AddUser()">Add Todos</button>
+        </div>
+   </div>
+    
+
+
+

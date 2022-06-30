@@ -1,0 +1,12 @@
+.clr-row{
+    display: flex;
+
+}
+span{
+    margin: 22%;
+}
+
+
+.card-text{
+    font-size: medium;
+}
