@@ -30,26 +30,7 @@ button {
   color: aliceblue;
   font-weight: bolder;
 }
-.form-check-input:checked  {
-  text-decoration:line-through;
+.todo-complete {
+  text-decoration: line-through;
 }
 
-
-/* tbody::-webkit-scrollbar {
-    width: 12px;               
-  }
-   */
-/* table::-webkit-scrollbar-track {
-    background: orange;       
-  }
-   */
-/* table::-webkit-scrollbar-thumb {
-    background-color: blue;    
-    border-radius: 20px;      
-    border: 3px solid orange;  
-  }
-   */
-
-/* .strikethrough:checked + span{
-    text-decoration:line-through
-  } */

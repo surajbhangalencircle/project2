@@ -12,9 +12,9 @@
             <tbody>
                 <tr *ngFor="let user of users; let i=index">
                     <td>{{i+1}}</td>
-                    <td id="strikethrough"><span>{{user.title}}</span></td>
+                    <td id="strikethrough"><label class="strikethrough"  [ngClass]="{'todo-complete': user.completed}">{{user.title}}</label></td>
                     <td id="status">{{user.completed}}</td>
-                    <td><input type="checkbox" class="form-check-input" [value]="user.id" [(ngModel)]="user.completed" change="changeStatus($event)" /></td>
+                    <td><input type="checkbox" class="form-check-input" [value]="user.id" [(ngModel)]="user.completed" change="changeStatus($event)" (click)="completeItem()" /></td>
                 </tr>
             </tbody>
         </table>
@@ -28,3 +28,4 @@
     </div>
 
 </div>
+

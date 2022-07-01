@@ -14,6 +14,7 @@ export class EdituserComponent implements OnInit, AfterViewInit {
 
 
   users: any;
+  isComplete: boolean = false;
 
   // status: boolean= false;
   // checkboxValue:boolean;
@@ -49,5 +50,8 @@ export class EdituserComponent implements OnInit, AfterViewInit {
 
   saveUser(){
     this.userDetails.saveTodo(this.users)
+  }
+  completeItem() {
+    this.isComplete = !this.isComplete;
   }
 }
