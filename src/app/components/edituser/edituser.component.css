@@ -30,7 +30,7 @@ button {
   color: aliceblue;
   font-weight: bolder;
 }
+
 .todo-complete {
   text-decoration: line-through;
 }
-

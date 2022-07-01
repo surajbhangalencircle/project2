@@ -1,18 +1,18 @@
 .clr-row {
-    display: flex;
+  display: flex;
 
 }
 
 .card {
-    margin: 5px;
+  margin: 5px;
 }
 
 span {
-    margin: 22%;
+  margin: 22%;
 }
 
 .card-text {
-    font-size: medium;
+  font-size: medium;
 }
 
 /* button{

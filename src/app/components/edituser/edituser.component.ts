@@ -1,12 +1,14 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { UserdetailsService } from 'src/app/services/userdetails.service';
 
+
+
 @Component({
   selector: 'app-edituser',
   templateUrl: './edituser.component.html',
   styleUrls: ['./edituser.component.css']
 })
-// @ViewChild('.strikethrough') strikethrough:ElementRef;
+
 export class EdituserComponent implements OnInit, AfterViewInit {
 
 
@@ -15,9 +17,6 @@ export class EdituserComponent implements OnInit, AfterViewInit {
 
   users: any;
   isComplete: boolean = false;
-
-  // status: boolean= false;
-  // checkboxValue:boolean;
 
   ngOnInit(): void {
     this.userDetails.getToDos().subscribe(
@@ -31,14 +30,13 @@ export class EdituserComponent implements OnInit, AfterViewInit {
   AddUser() {
     var title = (<HTMLInputElement>document.getElementById('inputTodo')).value;
     var id = (<HTMLInputElement>document.getElementById('status')).value;
-    
+
     this.userDetails.addNewtodos(title)
       .subscribe(
         data => console.log(data))
-        this.users.push({title: title, completed: id}
-      );
-    // console.log(this.users)
-     this.saveUser();
+    this.users.push({ title: title, completed: id }
+    );
+    this.saveUser();
   }
 
   // changeStatus($event:any){
@@ -48,10 +46,16 @@ export class EdituserComponent implements OnInit, AfterViewInit {
 
   // }
 
-  saveUser(){
+  saveUser() {
     this.userDetails.saveTodo(this.users)
   }
   completeItem() {
     this.isComplete = !this.isComplete;
+  }
+  deleteUser(i:any){
+    if(window.confirm('Are sure you want to delete this item ?')){
+      this.users.splice(i, 1)
+     }
+    
   }
 }

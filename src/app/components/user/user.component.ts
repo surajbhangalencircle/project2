@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { map } from 'rxjs';
 import { UserdetailsService } from 'src/app/services/userdetails.service';
 
 @Component({
@@ -12,18 +11,15 @@ export class UserComponent implements OnInit {
 
   constructor(private userDetails: UserdetailsService, private route: Router) { }
 
-  userData:any;
+  userData: any;
   ngOnInit(): void {
     this.userDetails.getData().subscribe(
-      res=> this.userData=res
-      
+      res => this.userData = res
     );
-    
   }
 
-  OnClick(){
+  OnClick() {
+    localStorage.setItem("userDetails", this.userData.id)
     this.route.navigate(['edituser']);
   }
-
-
 }

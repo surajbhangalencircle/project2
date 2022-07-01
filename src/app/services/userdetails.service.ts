@@ -21,14 +21,13 @@ export class UserdetailsService {
   }
 
   addNewtodos(title: any): Observable<any> {
-    return this.httpClient.post(this.toDosUrl, {title: title})
-
+    return this.httpClient.post(this.toDosUrl, { title: title })
   }
 
-  saveTodo(status: any) {
-    return this.httpClient.post("https://jsonplaceholder.typicode.com/todos?userId=11", { status})
+  saveTodo(toDo: any) {
+    return this.httpClient.post("https://jsonplaceholder.typicode.com/todos?userId=11", { toDo })
   }
-
-
-
+  deletetodos(id:any): Observable<any>{
+    return this.httpClient.delete(this.toDosUrl,id)
+  }
 }
